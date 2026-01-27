@@ -1,4 +1,7 @@
 package payment
+
+import modules.ModuleResult
+
 fun main(){
     val processor = PaymentProcessor()
     val payments = listOf(
@@ -26,5 +29,22 @@ fun main(){
         println("Платёж 1: $payment1")
         println("Платёж 2: $payment2")
         println("Одинаковые? ${payment1 == payment2}")
+
+        fun handleModuleResult(result: ModuleResult){
+            when(result){
+                is ModuleResult.Success ->
+                    println("${result.message}")
+                is ModuleResult.ResourceProduced ->
+                    println("Произведено: ${result.resource}+${result.amount}")
+                is ModuleResult.NotEnoughResources->
+                    println(
+                        "Недостаточно ресурса ${result.resourceName}. " +
+                                "Нужно:${result.required}, есть:${result.avaliable}"
+                    )
+                is ModuleResult.Error ->
+                    println("ОШИБКА${result.reason}")
+            }
+
+        }
     }
 }

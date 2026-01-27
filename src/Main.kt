@@ -1,3 +1,4 @@
+import example.handleResult
 import modules.EnergyGenerator
 import modules.ResearchLab
 import resources.OutpostResource
@@ -19,6 +20,12 @@ fun main() {
     val lab = ResearchLab()
     generator.performAction(manager)
     lab.performAction(manager)
+    println()
+    manager.printAll()
+    val generatorResult = generator.performAction(manager)
+    val labResult = lab.performAction(manager)
+    handleModuleResult(generatorResult)
+    handleModuleResul(labResult)
     println()
     manager.printAll()
 }
