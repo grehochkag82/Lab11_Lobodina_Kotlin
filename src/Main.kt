@@ -8,6 +8,7 @@ import resources.ResourceManager
 import example.InstantMessager
 import example.PhotoCamera
 import example.SmartPhone
+import example.UserProfile
 import modules.ModuleResult
 import payment.CardType
 import payment.Payment
@@ -90,4 +91,22 @@ fun main() {
     yotaPhone.sendVideoMessage()
     counter = 1
     counter = 5
+    println("Создаем профиль пользователя . . . ")
+    val user = UserProfile("Алиса","alice@example.com")
+
+    println("\nИмя:${user.name}")
+    println("Email:${user.name}")
+
+    println("\nОбращаемся к аватару впервые")
+    println("Файл аватара: ${user.avatar}")
+
+    println("\nОбращаемся к аватару снова(должен быть взят из кэша):")
+    println("Файл аватара: ${user.avatar}")
+
+    println("\n Меняем email:")
+    user.email = "alice_new_example.org"
+
+    println("\nМеняем имя:")
+    user.name = "Алиса.К"
+
 }
