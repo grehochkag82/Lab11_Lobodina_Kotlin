@@ -1,3 +1,4 @@
+import example.GameHero
 import example.handleResult
 import modules.EnergyGenerator
 import modules.ResearchLab
@@ -84,29 +85,44 @@ fun main() {
     handleModuleResult(labResult)
     println()
     manager.printAll()
-    val max = InstantMessager("MAX")
-    val photoCamera = PhotoCamera()
-    val yotaPhone = SmartPhone("YotaPhone", max)
-    yotaPhone.sendTextMessage()
-    yotaPhone.sendVideoMessage()
-    counter = 1
-    counter = 5
-    println("Создаем профиль пользователя . . . ")
-    val user = UserProfile("Алиса","alice@example.com")
+//    val max = InstantMessager("MAX")
+//    val photoCamera = PhotoCamera()
+//    val yotaPhone = SmartPhone("YotaPhone", max)
+//    yotaPhone.sendTextMessage()
+//    yotaPhone.sendVideoMessage()
+//    counter = 1
+//    counter = 5
+//    println("Создаем профиль пользователя . . . ")
+//    val user = UserProfile("Алиса","alice@example.com")
+//
+//    println("\nИмя:${user.name}")
+//    println("Email:${user.name}")
+//
+//    println("\nОбращаемся к аватару впервые")
+//    println("Файл аватара: ${user.avatar}")
+//
+//    println("\nОбращаемся к аватару снова(должен быть взят из кэша):")
+//    println("Файл аватара: ${user.avatar}")
+//
+//    println("\n Меняем email:")
+//    user.email = "alice_new_example.org"
+//
+//    println("\nМеняем имя:")
+//    user.name = "Алиса.К"
+    println("Создаем героя . . .")
+    val hero = GameHero("Воин Света")
 
-    println("\nИмя:${user.name}")
-    println("Email:${user.name}")
+    println("\nТекущая мана ${hero.mana}")
 
-    println("\nОбращаемся к аватару впервые")
-    println("Файл аватара: ${user.avatar}")
+    println("\n Герой пытается использовать способность:")
+    println("Способность:${hero.ultimate}")
 
-    println("\nОбращаемся к аватару снова(должен быть взят из кэша):")
-    println("Файл аватара: ${user.avatar}")
+    println("\n Повторный вызов способности (должна быть мнгновенной):")
+    println("Способность: ${hero.ultimate}")
 
-    println("\n Меняем email:")
-    user.email = "alice_new_example.org"
+    println("\n Меняем имя героя:")
+    hero.name = "Темный Паладин"
 
-    println("\nМеняем имя:")
-    user.name = "Алиса.К"
-
+    println("\nГерой восстанавливает ману:")
+    hero.mana =200
 }
