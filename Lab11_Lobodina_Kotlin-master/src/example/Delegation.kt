@@ -1,4 +1,4 @@
-package example
+  package example
 import kotlin.properties.Delegates
 interface Base {
     fun someFun()
@@ -33,3 +33,4 @@ class User{
         println(" Имя изменено: `$old`->`new`")
     }
 }
+
