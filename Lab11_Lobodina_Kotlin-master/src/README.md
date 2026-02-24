@@ -77,3 +77,4 @@ Observer-паттерн позволяет объектам реагироват
 
 
 https://github.com/grehochkag82/Lab11_Lobodina_Kotlin.git
+
