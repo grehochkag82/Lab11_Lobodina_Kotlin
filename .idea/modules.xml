@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/Lab11_Lobodina_Kotlin-master.iml" filepath="$PROJECT_DIR$/.idea/Lab11_Lobodina_Kotlin-master.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/popitka2.iml" filepath="$PROJECT_DIR$/popitka2.iml" />
+>>>>>>> 60bb48266aabbf5786e773e2cae5c4f1002867c9
     </modules>
   </component>
 </project>
